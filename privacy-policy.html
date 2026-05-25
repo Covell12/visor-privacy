@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visor – Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f9fafb;
+      color: #1a1a2e;
+      line-height: 1.7;
+      padding: 40px 20px 80px;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+      padding: 52px 60px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .brand-tagline {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 6px;
+    }
+
+    .effective-date {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-top: 36px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    p {
+      font-size: 14.5px;
+      color: #374151;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      font-size: 14.5px;
+      color: #374151;
+      margin: 10px 0 14px 20px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    .highlight-box {
+      background: #f0f7ff;
+      border-left: 4px solid #3b82f6;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #1e40af;
+    }
+
+    .contact-block {
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 24px;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .contact-block a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+
+    .contact-block a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="brand">
+      <div>
+        <div class="brand-name">Visor</div>
+        <div class="brand-tagline">AI Document Analyzer · Chrome Extension</div>
+      </div>
+    </div>
+
+    <h1>Privacy Policy</h1>
+    <p class="effective-date">Effective date: May 24, 2026 &nbsp;·&nbsp; Last updated: May 24, 2026</p>
+
+    <div class="highlight-box">
+      <strong>Short version:</strong> Visor reads your Google Docs and Slides revision history to show you contributor statistics and AI-powered analysis. Your document content is sent to Google's Gemini API for analysis. We never sell your data, store it on external servers, or share it with third parties.
+    </div>
+
+    <h2>1. What Visor Does</h2>
+    <p>
+      Visor is a Chrome browser extension that connects to your Google account to analyze the revision history of Google Docs and Google Slides documents you open. It provides per-contributor writing statistics, activity heatmaps, AI-generation likelihood scores, and a live typing-replay feature.
+    </p>
+
+    <h2>2. Data We Access</h2>
+    <p>To deliver its features, Visor requests the following OAuth scopes from your Google account:</p>
+    <ul>
+      <li><strong>drive.readonly</strong> — to identify document metadata (title, owner, collaborators) and retrieve revision history.</li>
+      <li><strong>drive.activity.readonly</strong> — to fetch time-stamped edit activity per contributor.</li>
+      <li><strong>documents.readonly</strong> — to read the full text of Google Docs for AI analysis.</li>
+      <li><strong>presentations.readonly</strong> — to read the text of Google Slides presentations for AI analysis.</li>
+    </ul>
+    <p>
+      Visor only reads documents that you explicitly open and choose to analyze by clicking the "Analyze" button in the side panel. It does not scan your Drive in the background, does not access other files, and does not monitor your browsing.
+    </p>
+
+    <h2>3. How Your Data Is Used</h2>
+    <p>Data accessed by Visor is used exclusively for the following purposes:</p>
+    <ul>
+      <li><strong>Revision statistics</strong> — character counts, word counts, and timestamps per contributor are computed locally in your browser.</li>
+      <li><strong>AI-generation analysis</strong> — the text content of the document being analyzed, along with contributor statistics, is sent to the <strong>Google Gemini API</strong> (generativelanguage.googleapis.com) to generate a narrative analysis and AI-likelihood assessment. This transmission is governed by <a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google's Generative AI Terms of Service</a>.</li>
+      <li><strong>Typing replay</strong> — revision snapshots are assembled locally in your browser to reconstruct the typing sequence. No content is sent externally for this feature.</li>
+    </ul>
+
+    <h2>4. Data Storage and Retention</h2>
+    <p>
+      Visor stores the following data locally on your device using the Chrome Storage API:
+    </p>
+    <ul>
+      <li>Your Google OAuth access token (temporary; expires as per Google's token policy).</li>
+      <li>Cached analysis results for documents you have analyzed, stored in <code>chrome.storage.local</code> on your device only.</li>
+      <li>Your extension preferences (e.g., active tab, UI state).</li>
+    </ul>
+    <p>
+      <strong>No data is transmitted to or stored on any Visor-controlled server.</strong> All processing happens either in your browser or via Google's own APIs (Google Drive, Google Docs, Google Gemini). Cached results remain on your device until you clear your browser data or uninstall the extension.
+    </p>
+
+    <h2>5. Data Sharing and Third Parties</h2>
+    <p>Visor does <strong>not</strong>:</p>
+    <ul>
+      <li>Sell, rent, or trade your data to any third party.</li>
+      <li>Share your document content with any advertising or analytics networks.</li>
+      <li>Transmit data to any server other than Google's own APIs listed above.</li>
+    </ul>
+    <p>
+      The only external services Visor communicates with are:
+    </p>
+    <ul>
+      <li><strong>Google OAuth / Identity API</strong> — for authentication.</li>
+      <li><strong>Google Drive API</strong> — for revision history and file metadata.</li>
+      <li><strong>Google Drive Activity API</strong> — for per-contributor activity data.</li>
+      <li><strong>Google Docs API</strong> — for document text content.</li>
+      <li><strong>Google Slides API</strong> — for presentation text content.</li>
+      <li><strong>Google Gemini API</strong> — for AI-powered analysis of document content.</li>
+    </ul>
+    <p>All of the above are Google services subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+
+    <h2>6. Sensitive Scope Justifications</h2>
+    <p>The Google Drive scopes we request are considered sensitive. Here is why each is necessary:</p>
+    <ul>
+      <li><strong>drive.readonly</strong>: Required to retrieve the list of document revisions and identify which users contributed content. Without this scope, revision history is inaccessible.</li>
+      <li><strong>drive.activity.readonly</strong>: Required to show time-stamped activity per contributor, powering the activity heatmap and session analysis.</li>
+      <li><strong>documents.readonly</strong>: Required to read the plain text of a Google Doc so it can be sent to the Gemini API for AI-generation analysis and to power the typing replay feature.</li>
+      <li><strong>presentations.readonly</strong>: Same as above, for Google Slides presentations.</li>
+    </ul>
+    <p>Visor uses the minimum permissions necessary to provide its advertised features. The extension does not request write access of any kind.</p>
+
+    <h2>7. AI Detection Accuracy Disclaimer</h2>
+    <p>
+      Visor's AI-generation detection scores are heuristic estimates and are <strong>not definitive proof</strong> of AI authorship. Scores below 60% are particularly unreliable and should not be used as evidence of academic dishonesty or any similar claim. The feature is intended as a supplementary investigative tool, not a conclusive determination.
+    </p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>
+      Visor is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has used the extension in a way that has transmitted their personal data, please contact us and we will take appropriate steps.
+    </p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the extension after changes are posted constitutes acceptance of the updated policy.
+    </p>
+
+    <h2>10. Contact</h2>
+    <div class="contact-block">
+      If you have questions or concerns about this Privacy Policy or Visor's data practices, please contact:<br><br>
+      <strong>Visor – AI Document Analyzer</strong><br>
+      Developer contact: <a href="mailto:ethan.bernstein@gmail.com">ethan.bernstein@gmail.com</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Visor – AI Document Analyzer. All rights reserved.
+  </footer>
+</body>
+</html>
